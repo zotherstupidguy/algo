@@ -1,14 +1,19 @@
-UoW PhD Thesis Template
+PhD Thesis Template
 =======================
 
-These files are a LaTeX template for PhD theses at the [University of Waikato][1], New Zealand. They are designed for theses in Computer Science but probably work just as well for other departments.
+Part 1: The philosophy of granularity (The Introduction)                                                                                         
+============================================================
 
-By Andrea Schweer <schweer@cs.waikato.ac.nz> -- use at own risk but in whichever way you want. 
 
-The template follow the regulations in the [Higher Degrees Handbook][2] at its current version (31 August 2010). The files include a [sample output][3] file.
 
-Instructions are in thesis.tex. Replace introduction.tex and conclusions.tex with your own chapters, same for the appendix.
+- What is philosphy? Start by the idea of philopshy, Why we use philosphy to precieve other sciences and not vice-versa? 10pages
+- the idea of plato's philosphy and idealism 10pages
+- software from the prespective of plato idealism 10pages
+- prespectives and patterns, patterns of usability and usability of patterns. 10pages
+- software architecutre, design, algorithm, etc as patterns encapsulated in levels of granularity 10pages 
 
-[1]: http://www.waikato.ac.nz
-[2]: http://www.waikato.ac.nz/sasd/files/pdf/postgraduate/higherdegreeshandbook.pdf
-[3]: http://github.com/schweerelos/University-of-Waikato-PhD-thesis-template/raw/master/example.pdf
+
+Philosphy is the way we manage to collect our consiouse methods of thinking under a terminology family that represent ideas.
+
+Domain-specific frameworks are (defenition), exisited for a long time now. Software developers (engineers) are often customed to the use of an encapsulating object that mainifests a reusability of some sort, such as a software library or a software framework. domain-specific frameworks. 
+

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.10.22)  5 APR 2015 11:43
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2014.10.22)  5 APR 2015 11:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1207,6 +1207,12 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 6.
 LaTeX Font Info:    Font shape `T1/fve/m/n' will be
 (Font)              scaled to size 6.29996pt on input line 6.
+
+Overfull \hbox (3.03175pt too wide) in paragraph at lines 13--14
+[]\T1/fve/m/n/12 Software en-gi-neer-ing is a broad sub-ject, but a great deal 
+can be gleaned
+ []
+
 ) (./conclusions.tex [1
 
 
@@ -1235,10 +1241,10 @@ Package rerunfilecheck Info: File `thesis.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 62.
  ) 
 Here is how much of TeX's memory you used:
- 11820 strings out of 493485
- 173226 string characters out of 3143525
- 287844 words of memory out of 3000000
- 14843 multiletter control sequences out of 15000+200000
+ 11819 strings out of 493485
+ 173216 string characters out of 3143525
+ 288844 words of memory out of 3000000
+ 14842 multiletter control sequences out of 15000+200000
  53842 words of font info for 49 fonts, out of 3000000 for 9000
  964 hyphenation exceptions out of 8191
  50i,8n,57p,246b,401s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1247,7 +1253,7 @@ e/texmf-dist/fonts/type1/public/bera/fver8a.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/bera/fver8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/bera/fvsb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/bera/fv
 sr8a.pfb>
-Output written on thesis.pdf (22 pages, 281689 bytes).
+Output written on thesis.pdf (22 pages, 282319 bytes).
 PDF statistics:
  173 PDF objects out of 1000 (max. 8388607)
  142 compressed objects within 2 object streams
