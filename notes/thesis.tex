@@ -1,0 +1,68 @@
+\documentclass[final]{uowphd}
+% final for final layout; leave out for layout that saves some space
+
+% preamble contains additional customisation
+\input{preamble}
+
+% stuff for title page
+\author{AUTHOR} 
+\title{TITLE}
+\date{eg MONTH YEAR}
+\copyrightyear{YEAR}
+
+% dedication, if using -- delete line if no dedication
+\dedication{DEDICATION}
+
+\begin{document}
+% top-level PDF bookmark that will contain table of contents etc
+\pdfbookmark[1]{Front Matter}{frontmatter}
+\frontmatter
+
+\maketitle
+
+\input{abstract}
+\input{acknowledgements}
+
+% this might have to be here in the end to ensure bookmark is at
+% correct spot
+% \cleardoublepage
+\pdfbookmark[2]{Contents}{toc}
+\tableofcontents
+
+\cleardoublepage 
+\pdfbookmark[2]{List of Figures}{lof}
+\listoffigures
+
+\cleardoublepage 
+\pdfbookmark[2]{List of Tables}{lot}
+\listoftables
+
+% if using examples
+\cleardoublepage 
+\listof{xmpl}{List of Examples}
+
+\mainmatter
+
+% replace with own chapters
+\input{introduction}
+\input{conclusions}
+% end replace with own chapters
+
+% if using appendices
+\appendix
+
+% replace with own appendices
+\input{appendix-userstudy}
+% end replace with own appendices
+
+\backmatter
+
+\bibliography{relatedwork}
+
+\end{document}
+
+% for emacs
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 

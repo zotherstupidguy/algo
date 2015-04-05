@@ -1,0 +1,226 @@
+% to allow unicode input, eg in bibliography
+\usepackage[utf8]{inputenc}
+
+\usepackage{ifthen}
+
+% more compact enumerate and itemize
+\usepackage{mdwlist}
+
+% to allow inclusion of version information from svn
+\usepackage{svn-multi}
+
+\usepackage{url}
+\usepackage{graphicx}
+
+% ensure floats come after their first reference
+\usepackage{flafter}
+
+% prettier tables
+\usepackage{booktabs}
+
+% place footnotes *below* floats at bottom of page
+\usepackage{stfloats}
+\fnbelowfloat
+
+% new type of float for examples
+\usepackage{float}
+\floatstyle{komabelow}
+\newfloat{xmpl}{tbp}{loe}[chapter]
+\floatname{xmpl}{Example}
+\newcommand{\theHxmpl}{\arabic{xmpl}}
+
+% from http://wiki.lyx.org/FAQ/ShadedBox
+% except that we're using xcolor cause that helps with zebra-striped
+% tables, see
+% http://en.wikibooks.org/wiki/LaTeX/Tables#Alternate_Row_Colors_in_Tables
+\makeatletter
+\usepackage[table]{xcolor}
+\usepackage{calc}
+\definecolor{shade}{gray}{0.9}
+\definecolor{frame}{gray}{0.8}
+\setlength{\fboxrule}{2pt}
+\setlength{\fboxsep}{0.5em}
+\newenvironment{myshadedbox}[1][]%
+{%
+  \normalfont\small\sffamily\raggedright
+  \begin{center}
+    \vspace{-2ex}
+  \begin{lrbox}{\@tempboxa}%
+    \begin{minipage}{0.95\textwidth-2\fboxsep-2\fboxrule}
+}%
+{%
+  \end{minipage}%
+  \end{lrbox}%
+  \fcolorbox{frame}{shade}{\usebox{\@tempboxa}}
+  \end{center}
+  \vspace{-2ex}
+}%
+\makeatother
+
+% for zebra-striped tables
+\definecolor{oddrowcolor}{gray}{0.9}
+\definecolor{evenrowcolor}{gray}{1}
+
+% for code listings
+\usepackage{listings}
+\lstdefinelanguage{n3}{%
+  morekeywords=[2]{@prefix},
+  morekeywords=[3]{(,),[,],;,.},
+  morekeywords=[4]{a,has,is,of},
+  sensitive=false,
+  morestring=[b]",
+  emph={^^xsd:nonNegativeInteger,^^xsd:string},
+  alsoletter={()[];.:^},
+}[keywords,comments,strings,emph]
+\lstset{language=n3}
+\lstset{%
+  basicstyle=\small\ttfamily,
+  keywordstyle={\color{listingsthing}},
+  keywordstyle=[2]{\color{listingsprefix}},
+  keywordstyle=[3]{\color{listingsinterpunct}},
+  keywordstyle=[4]{\color{listingskeyword}\bfseries},
+  emphstyle={\color{listingsnamespace}},
+  showstringspaces=false,
+  stringstyle={\color{listingsstring}},
+  breaklines=true
+}
+\definecolor{listingsthing}{RGB}{175,126,21}
+\definecolor{listingsprefix}{gray}{0}
+% parrot teal
+%\definecolor{listingskeyword}{RGB}{52,112,125}
+\definecolor{listingskeyword}{gray}{0}
+\definecolor{listingsinterpunct}{gray}{0}
+% parrot dirty yellowish
+%\definecolor{listingsnamespace}{RGB}{186,203,206}
+\definecolor{listingsnamespace}{gray}{0}
+\definecolor{listingsstring}{RGB}{52,112,125}
+
+\definecolor{owlcolor}{RGB}{52,112,125}
+
+% to save space in some tables
+\usepackage{rotating}
+\newcommand*{\rotatedcolheader}[1]{\begin{sideways}#1\end{sideways}}
+
+% for acronyms
+\usepackage{acronym}[2009/10/20]
+\acrodef{carpe}[CARPE]{Continuous Archival and Retrieval of Personal
+  Experiences}
+\acrodef{pim}[PIM]{Personal Information Management}
+
+% to separate things in the online version from things in the print
+% version -- dirty hack, swap definitions for print version
+\newcommand{\onlinevsprint}[2]{#2}
+%\newcommand{\onlinevsprint}[2]{#1} 
+
+% Table of contents only goes down to subsection
+\setcounter{tocdepth}{2}
+
+% accommodate 3-digit page numbers
+% see http://www.mofeel.net/809-comp-text-tex/11299.aspx
+% and http://www.komascript.de/node/608
+\makeatletter% --> De-TeX-FAQ
+\renewcommand*{\@tocrmarg}{3em}
+\renewcommand*{\@pnumwidth}{2em}
+\makeatother% --> \makeatletter
+
+% improve spacing
+\usepackage[compact]{titlesec}
+
+% change size of floats allowed at top/bottom etc
+% http://www.tex.ac.uk/cgi-bin/texfaq2html?label=floats
+\renewcommand{\topfraction}{.85}
+\renewcommand{\bottomfraction}{.7}
+\renewcommand{\textfraction}{.15}
+\renewcommand{\floatpagefraction}{.66}
+\renewcommand{\dbltopfraction}{.66}
+\renewcommand{\dblfloatpagefraction}{.66}
+\setcounter{topnumber}{9}
+\setcounter{bottomnumber}{9}
+\setcounter{totalnumber}{20}
+\setcounter{dbltopnumber}{9}
+
+% hyperref wants to be added as the very last usepackage
+\usepackage{ifpdf}
+\ifpdf
+  \usepackage[pdftex,%
+  backref=false,%
+  linktocpage=false,%
+  breaklinks,%
+  colorlinks,%
+  linkcolor=black,%
+  pagecolor=black,%
+  urlcolor=black,%
+  citecolor=black,%
+  pdfauthor=Firstname~Lastname,%
+  pdftitle=Title~of~the~thesis,%
+  plainpages=false%
+  ]{hyperref}
+  \usepackage[final]{pdfpages}
+\else
+  \usepackage[dvips,%
+  backref=false,%
+  linktocpage,%
+  breaklinks,%
+  colorlinks,%
+  linkcolor=black,%
+  pagecolor=black,
+  urlcolor=black,%
+  citecolor=black%
+  ]{hyperref}
+\fi 
+
+% delete these two lines if you want monospace URLs
+\urlstyle{sf}
+\UrlFont{\sffamily\small}
+
+% to include svn version information, see chapter files for example
+\newcommand{\versionfootnote}{\footnote{rev.~\svnfilerev, last updated \svnfiledate.}}
+%\newcommand{\versionfootnote}{}
+
+% custom environments and commands -- you can delete everything below
+% this line
+\newcounter{recommend}
+\newcommand{\recommendation}[1]{%
+\begin{quotation}%
+\stepcounter{recommend}
+\noindent\textit{R\therecommend: }#1%
+\end{quotation}}
+
+\newcommand{\notetoself}[1]{$\bullet$~{\color{magenta}\sffamily#1}~$\bullet$}
+\newcommand{\refmissing}{{\small\textbf{\color{red}(ref!)}}}
+\newcommand*{\picmissing}[1]{{\color{cyan}\sffamily#1}}
+
+\newcommand{\defi}[1]{\emph{#1}}
+
+\newcommand*{\owl}[1]{\textsf{\small\color{owlcolor}#1}}
+
+\newcounter{walkthroughstep}[subsection]
+\newenvironment{step}{\refstepcounter{walkthroughstep}\par\medskip\noindent%
+\begin{tabular*}{\textwidth}{p{.95\textwidth}}%
+\toprule%
+{\itshape Step~\thewalkthroughstep:~}%
+}{%
+\\%
+\bottomrule\end{tabular*}\par\medskip%
+}
+
+\newenvironment{answer}[1]{%
+  \sffamily\small%
+  \setlength{\parindent}{0pt}%
+  \par\hrulefill\par%
+  {\bfseries #1}\par\vspace{-\parsep}%
+  \hrulefill\par%
+  \nopagebreak[4]
+}{%
+  \nopagebreak[4]
+  \par\vspace{-\parsep}\hrulefill\par%
+}
+
+% custom hyphenation -- adjust as necessary
+\hyphenation{tem-po-ral se-quen-ces re-cor-ded auto-bio-gra-phi-cal
+  epi-so-dic screen-shot screen-shots}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "thesis"
+%%% End: 
