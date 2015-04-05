@@ -1,0 +1,13 @@
+Part 1: The philosophy of granularity (The Introduction)
+------------------------------
+
+- What is philosphy? Start by the idea of philopshy, Why we use philosphy to precieve other sciences and not vice-versa? 10pages
+- the idea of plato's philosphy and idealism 10pages
+- software from the prespective of plato idealism 10pages
+- prespectives and patterns, patterns of usability and usability of patterns. 10pages
+- software architecutre, design, algorithm, etc as patterns encapsulated in levels of granularity 10pages 
+
+
+Philosphy is the way we manage to collect our consiouse methods of thinking under a terminology family that represent ideas.
+
+Domain-specific frameworks are (defenition), exisited for a long time now. Software developers (engineers) are often customed to the use of an encapsulating object that mainifests a reusability of some sort, such as a software library or a software framework. domain-specific frameworks. 
