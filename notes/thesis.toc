@@ -1,0 +1,13 @@
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}The Why of philosphy?}{1}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}The crafting of philopshy}{1}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}The Fallacy of a Univesal Philosphy}{2}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.3}Philosphy and technology}{2}{subsection.1.1.3}
+\contentsline {section}{\numberline {1.2}the idea of plato's philosphy and idealism}{2}{section.1.2}
+\contentsline {section}{\numberline {1.3}software from the prespective of plato idealism}{2}{section.1.3}
+\contentsline {section}{\numberline {1.4}prespectives and patterns, patterns of usability and usability of patterns.}{2}{section.1.4}
+\contentsline {section}{\numberline {1.5}software architecutre, design, algorithm, etc as patterns encapsulated in levels of granularity}{2}{section.1.5}
+\contentsline {section}{\numberline {1.6}Philosphy is the way we manage to collect our consiouse methods of thinking under a terminology family that represent ideas.}{3}{section.1.6}
+\contentsline {section}{\numberline {1.7}understanding datastructures and algorithims is important for developing well-crafted software.}{3}{section.1.7}
+\contentsline {chapter}{\numberline {2}Summary and Conclusions}{5}{chapter.2}
+\contentsline {chapter}{\numberline {A}Material for the user study}{7}{appendix.A}
